@@ -1,0 +1,749 @@
+*{
+  font-family: 'Roboto', sans-serif;
+}
+html {
+  scroll-behavior: smooth;
+}
+.header {
+    z-index: 1000;
+    position: absolute;
+    z-index: 100;
+    top: 0;
+    left: 0; }
+    .header_nav {
+      justify-content: space-between; }
+    .header_logo {
+      font-size: 40px;
+      color: #ffffff !important; }
+    .header_button {
+      background-color:  rgb(214, 116, 86); }
+    .header_collapse {
+      text-align: right;
+      flex-grow: unset !important; 
+    }
+    .header_ul .active::after {
+      width: 100%; }
+    .header_ul .active a {
+      color:  rgb(214, 116, 86) !important; }
+    .header_li {
+      border-bottom: 1px solid gray;
+      padding: 0 10px; }
+      .header_li:hover .header_a {
+        color:  rgb(214, 116, 86) !important; }
+      .header_li::after {
+        content: "";
+        width: 0;
+        height: 3px;
+        display: block;
+        background-color:  rgb(214, 116, 86);
+        transition: 0.5s; }
+      .header_li:hover::after {
+        width: 100%; }
+    .header_a {
+      color: #ffffff !important;
+      font-size: 20px; }
+  
+  @media screen and (max-width: 992px) {
+    .header_ul {
+      position: static;
+      text-align: center;
+      z-index: 999;
+      color: white;
+      background: rgba(0, 0, 0, 0.9);
+      margin: 50px 0;
+      font-size: 30px; }
+    .header_li {
+      border-bottom: unset;
+      padding: 0; } }
+  #carousel .pagi-edit {
+    width: 15px !important;
+    height: 15px !important;
+    border-radius: 50% !important; }
+  #carousel .active {
+    background-color: rgb(214, 116, 86) !important; }
+  #carousel .carousel-inner__edit .carousel-inner__item .carousel-inner__item-img-1 {
+    background-image: url("./img/hero-1.jpg");
+    background-position: center center;
+    background-size: cover;
+    width: 100%;
+    height: 600px; }
+  #carousel .carousel-inner__edit .carousel-inner__item .carousel-inner__item-img-2 {
+    background-image: url("./img/hero-2.jpg");
+    background-position: center center;
+    background-size: cover;
+    width: 100%;
+    height: 600px; }
+  #carousel .carousel-inner__edit .carousel-inner__item .carousel-inner__item-img-3 {
+    background-image: url("./img/hero-3.jpg");
+    background-position: center center;
+    background-size: cover;
+    width: 100%;
+    height: 600px; }
+  #carousel .carousel-inner__edit .carousel-inner__item .carousel-inner_caption {
+    padding-bottom: 15%;
+    right: unset;
+    width: 50%;
+    text-align: start; }
+    #carousel .carousel-inner__edit .carousel-inner__item .carousel-inner_caption a {
+      color: #ffffff !important;
+      text-decoration: none; }
+      #carousel .carousel-inner__edit .carousel-inner__item .carousel-inner_caption a:hover {
+        color:  rgb(214, 116, 86) !important; }
+      #carousel .carousel-inner__edit .carousel-inner__item .carousel-inner_caption a:hover img {
+        background-color: rgb(214, 116, 86);
+        border-radius: 50%; }
+      #carousel .carousel-inner__edit .carousel-inner__item .carousel-inner_caption a span {
+        font-size: 30px;
+        margin-left: 10px; }
+  #carousel .carousel-inner__edit .carousel-item__overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(to top, black, rgba(0, 0, 0, 0.2)); }
+  
+  @media screen and (max-width: 992px) {
+    .carousel-inner_caption {
+      padding-bottom: 20% !important;
+      right: unset;
+      width: 50%;
+      text-align: start; } }
+  @media screen and (max-width: 800px) {
+    .carousel-inner_caption {
+      padding-bottom: 20% !important;
+      right: unset;
+      width: 100%;
+      text-align: start; }
+      .carousel-inner_caption h1 {
+        font-size: 30px; } }
+  @media screen and (max-width: 600px) {
+    
+    .carousel-inner_caption {
+      padding-bottom: 30% !important;
+      right: unset;
+      width: 50%;
+      text-align: start; }
+      .carousel-inner_caption h1 {
+        font-size: 23px; }
+      .carousel-inner_caption span {
+        font-size: 20px !important;
+        margin-left: 10px; }
+  
+    .carousel-video-trailer img {
+      width: 40px; } }
+  .now-playing {
+    margin-top: 100px;
+    padding-bottom: 100px !important; }
+  
+ /*---------------------------------------- carousel */
+ #intro{
+    position: relative;
+ }
+ .intro-default{
+    position: relative;
+ }
+.intro-overclay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:  rgba(0, 0, 0, 0.3);
+    z-index:5;
+}
+.intro-img{
+    background-image: url("./img/hinh5.jpg");
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    height: 600px;
+}
+
+.intro-banner{
+  background-color:transparent;
+  width: 100%;
+  height: 600px;
+  z-index: 99;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+.intro-arrow{
+  border-bottom: 400px solid transparent;
+  border-left: 400px solid  rgb(214, 116, 86);
+  border-top: 400px solid transparent;
+  position: relative;
+}
+.intro-arrow1{
+  position: absolute;
+  border-bottom: 200px solid transparent;
+  border-left: 200px solid  rgba(0, 0, 0, 0.5);
+  border-top: 200px solid transparent;
+  left: -400px;
+  z-index: 100;
+}
+.intro-arrow2{
+  position: absolute;
+  border-bottom: 100px solid rgba(0, 0, 0, 0.5);
+  border-left: 100px solid  transparent;
+  border-right: 100px solid transparent;
+  z-index: 100;
+  left: -199px;
+  top: 100px;
+}
+.intro-content{
+  /* width: 100%; */
+  color: white;
+  position: absolute;
+  top: 62%;
+  left: 5%;
+  z-index: 100;
+}
+.intro-content h1{
+  /* font-size: 3.0rem; */
+  letter-spacing: 5px;
+}
+.intro-social{
+  position: absolute;
+  color: white;
+  bottom: 10%;
+  right: 10%;
+  z-index: 100;
+}
+.intro-social a{
+  text-decoration: none;
+  color: white;
+}
+.intro-social a:hover i{ 
+  background-color: rgb(214, 116, 86);
+}
+.intro-social i{
+  width: 50px;
+  height: 50px;
+  border: 2px solid white;
+  border-radius: 50%;
+  line-height: 50px;
+  text-align: center;
+  margin-right: 20px;
+}
+ .intro-download{
+   position: absolute;
+   bottom: 10px;
+   right: 16%;
+   z-index: 100;
+   /* cursor: pointer; */
+  }
+  .intro-download button{
+    background: rgb(214, 116, 86);
+    padding: 10px 50px;
+    color: white;
+ }
+  
+
+ /* respont carousel */
+@media screen and (max-width:700px){
+  .intro-content h1{
+    font-size: 1.6rem !important;
+  }
+  .intro-social a:hover i{ 
+    background-color:#6b3a2b;
+  }
+}
+@media screen and (max-width:700px){
+  .intro-content h1{
+    font-size: 1.6rem !important;
+  }
+  .intro-social a:hover i{ 
+    background-color:#6b3a2b;
+  }
+}
+@media screen and (max-width:500px){
+  .intro-content h1{
+    font-size: 1.4rem !important;
+  }
+  .intro-content h3{
+    font-size: 20px
+  }
+  .intro-social a:hover i{ 
+    background-color:#6b3a2b;
+  }
+}
+/* ----------------------------------------------end carousel */
+
+/* ----------------------------------------------about */
+#about{
+  /* margin: 50px 0; */
+}
+#about h1{
+  text-align: center;
+}
+.about{
+  /* margin-top: 20px; */
+  display: flex;
+  margin: auto;
+  justify-content: space-between;
+  align-items: center;
+  /* margin-top: 50px; */
+}
+.about-img img{
+  height: 500px;
+  max-width: 500px;
+  border: 1px solid white; 
+}
+.about-icon{
+  text-align: center;
+}
+.about-icon i{
+  font-size: 5rem;
+  color: rgb(214, 116, 86);
+}
+.about-w{
+  width: 50%;
+}
+.about-color{
+  color: rgb(214, 116, 86);
+  font-weight: bold;
+}
+@media screen and (max-width:768px){
+  .about{
+    display: unset !important;
+  }
+  .about-img{
+    display: none;
+  }
+  .about-content{
+    text-align: center;
+    width: unset;
+  }
+}
+/* ----------------------------------------------end about */
+
+/* ---------------------------------------------education-work */
+
+.education-work{
+  /* background: rgb(214, 116, 86); */
+  background:#eeb007
+}
+/*===== Vertical Timeline =====*/
+#conference-timeline {
+  position: relative;
+  max-width: 920px;
+  width: 100%;
+  margin: 0 auto;
+}
+#conference-timeline .timeline-start,
+#conference-timeline .timeline-end {
+  display: table;
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  font-weight: 900;
+  text-transform: uppercase;
+  background: #00b0bd;
+  padding: 15px 23px;
+  color: #fff;
+  max-width: 5%;
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
+}
+#conference-timeline .conference-center-line {
+  position: absolute;
+  width: 3px;
+  height: 100%;
+  top: 0;
+  left: 50%;
+  margin-left: -2px;
+  background: white;
+  z-index: 0;
+}
+#conference-timeline .conference-timeline-content {
+  padding-top: 67px;
+  padding-bottom: 67px;
+}
+.timeline-article {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  margin: 20px 0;
+}
+.timeline-article .content-left-container,
+.timeline-article .content-right-container {
+  max-width: 44%;
+  width: 100%;
+}
+.timeline-article .timeline-author {
+  display: block;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: #242424;
+  text-align: right;
+}
+.timeline-article .content-left,
+.timeline-article .content-right {
+  position: relative;
+  width: auto;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  box-shadow: 0 1px 3px rgba(0,0,0,.03);
+  padding: 27px 25px;
+}
+.timeline-article p {
+  /* margin: 0 0 0 60px; */
+  padding: 0;
+  font-weight: 400;
+  color: #242424;
+  font-size: 14px;
+  line-height: 24px;
+  position: relative;
+}
+.timeline-article p span.article-number {
+  position: absolute;
+  font-weight: 300;
+  font-size: 44px;
+  top: 10px;
+  left: -60px;
+  color: #00b0bd;
+}
+.timeline-article .content-left-container {
+  float: left;
+}
+.timeline-article .content-right-container {
+  float: right;
+}
+.timeline-article .content-left:before,
+.timeline-article .content-right:before{
+  position: absolute;
+  top: 20px;
+  font-size: 23px;
+  font-family: "FontAwesome";
+  color: #fff;
+}
+.timeline-article .content-left:before {
+  content: "\f0da";
+  right: -8px;
+}
+.timeline-article .content-right:before {
+  content: "\f0d9";
+  left: -8px;
+}
+.timeline-article .meta-date {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 62px;
+  height: 62px;
+  margin-left: -31px;
+  color: #fff;
+  border-radius: 100%;
+  background: white;
+  /* transform: translateX(100%); */
+
+}
+.timeline-article .meta-date .date,
+.timeline-article .meta-date .month {
+  display: block;
+  text-align: center;
+  font-weight: 900;
+}
+.timeline-article .meta-date .date {
+  font-size: 30px;
+  line-height: 40px;
+}
+.timeline-article .meta-date .month {
+  font-size: 18px;
+  line-height: 10px;
+}
+/*===== // Vertical Timeline =====*/
+
+/*===== Resonsive Vertical Timeline =====*/
+@media only screen and (max-width: 830px) {
+  #conference-timeline .timeline-start,
+  #conference-timeline .timeline-end {
+    margin: 0;
+  }
+  #conference-timeline .conference-center-line {
+    margin-left: 0;
+    left: 50px;
+  }
+  .timeline-article .meta-date {
+    margin-left: 0;
+    left: 20px;
+  }
+  .timeline-article .content-left-container,
+  .timeline-article .content-right-container {
+    max-width: 100%;
+    width: auto;
+    float: none;
+    margin-left: 110px;
+    min-height: 53px;
+  }
+  .timeline-article .content-left-container {
+    margin-bottom: 20px;
+  }
+  .timeline-article .content-left,
+  .timeline-article .content-right {
+    padding: 10px 25px;
+    min-height: 65px;
+  }
+  .timeline-article .content-left:before {
+    content: "\f0d9";
+    right: auto;
+    left: -8px;
+  }
+  .timeline-article .content-right:before {
+    display: none;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .timeline-article p {
+    margin: 0;
+  }
+  .timeline-article p span.article-number {
+    display: none;
+  }
+  
+}
+/*===== // Resonsive Vertical Timeline =====*/
+/* ---------------------------------------------education-work */
+
+/* -------------------------------------------skill */
+.container::before{
+  /* background: none; */
+}
+.skill-bar{
+  background: #a4a4a4 ;
+  width: 100%;
+  height: 20px;
+}
+.skill-bar1{
+  
+  background: rgb(214, 116, 86);
+  animation: bar1 1s;
+  animation-fill-mode: forwards;
+  width: 70%;
+  height: 20px;
+}
+@keyframes bar1{
+  0%{
+    width: 0%;
+    height: 20px;
+  }
+  100%{
+    width: 70%;
+    height: 20px;
+  }
+}
+.skill-bar2{
+  width: 65%;
+  height: 20px;
+  background: rgb(214, 116, 86);
+  animation: bar2 1s;
+  animation-fill-mode: forwards;
+}
+@keyframes bar2{
+  0%{
+    width: 0%;
+    height: 20px;
+  }
+  100%{
+    width: 65%;
+    height: 20px;
+  }
+}
+.skill-bar3{
+  width: 60%;
+  height: 20px;
+  background: rgb(214, 116, 86);
+  animation: bar3 1s;
+  animation-fill-mode: forwards;
+}
+@keyframes bar3{
+  0%{
+    width: 0%;
+    height: 20px;
+  }
+  100%{
+    width: 60%;
+    height: 20px;
+  }
+}
+.skill-bar4{
+  width: 70%;
+  height: 20px;
+  background: rgb(214, 116, 86);
+  animation: bar4 1s;
+  animation-fill-mode: forwards;
+}
+@keyframes bar4{
+  0%{
+    width: 0%;
+    height: 20px;
+  }
+  100%{
+    width: 70%;
+    height: 20px;
+  }
+}
+/* -----------------------col-right */
+.skill-bar5{
+  width: 60%;
+  height: 20px;
+  background: rgb(214, 116, 86);
+  animation: bar5 1s;
+  animation-fill-mode: forwards;
+}
+@keyframes bar5{
+  0%{
+    width: 0%;
+    height: 20px;
+  }
+  100%{
+    width: 60%;
+    height: 20px;
+  }
+}
+.skill-bar6{
+  width: 50%;
+  height: 20px;
+  background: rgb(214, 116, 86);
+  animation: bar6 1s;
+  animation-fill-mode: forwards;
+}
+@keyframes bar6{
+  0%{
+    width: 0%;
+    height: 20px;
+  }
+  100%{
+    width: 50%;
+    height: 20px;
+  }
+}
+.skill-bar7{
+  width: 70%;
+  height: 20px;
+  background: rgb(214, 116, 86);
+  animation: bar7 1s;
+  animation-fill-mode: forwards;
+}
+.skill-bar4{
+  width: 40%;
+  height: 20px;
+  background: rgb(214, 116, 86);
+  animation: bar4 1s;
+  animation-fill-mode: forwards;
+}
+@keyframes bar4{
+  0%{
+    width: 0%;
+    height: 20px;
+  }
+  100%{
+    width: 40%;
+    height: 20px;
+  }
+}
+
+@keyframes bar5{
+  0%{
+    width: 0%;
+    height: 20px;
+  }
+  100%{
+    width: 50%;
+    height: 20px;
+  }
+}
+@keyframes bar7{
+  0%{
+    width: 0%;
+    height: 20px;
+  }
+  100%{
+    width: 70%;
+    height: 20px;
+  }
+}
+.skill-bar8{
+  width: 60%;
+  height: 20px;
+  background: rgb(214, 116, 86);
+  animation: bar8 1s;
+  animation-fill-mode: forwards;
+}
+@keyframes bar8{
+  0%{
+    width: 0%;
+    height: 20px;
+  }
+  100%{
+    width: 60%;
+    height: 20px;
+  }
+}
+/* -------------------------------------------end skill */
+ 
+/*------------------------------------------------------------------ portforlio */
+/* .portfolio iframe{
+  display: none;
+}
+img:hover + iframe{
+  display: block;
+}
+img:hover{
+  display: none;
+} */
+
+
+/* ------------------------------------------------------------------end portforlio */
+
+
+
+
+
+/* contact */
+.contact{
+  /* background: url('img/black-and-white-electronics-illuminated-220357.jpg');
+  background-size: cover;
+  background-position: center center; */
+  
+  background-color: rgba(0, 0, 0, 0.9);
+  color: white;
+  padding-bottom: 50px;
+  padding-top: 50px;
+}
+/* .contact h1{
+  color: rgb(214, 116, 86)
+} */
+.contact h5{
+  font-weight: bold;
+}
+.contact button{
+  background-color: rgb(214, 116, 86);
+  color: white;
+}
+.contact i {
+  font-size: 50px;
+}
+.contact .text-contact{
+  color: rgb(214, 116, 86);
+  font-weight: bold;
+
+}
+.contact .contact-border{
+  border: 1px solid white;
+  /* border-radius: 20px; */
+}
+/* end contact */
+
+
+.test {
+  font-size: 35px;
+    background-color: #e8676b;
+    color: white;
+}
